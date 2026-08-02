@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+dist/
+reports/
+scan-*.json
+cleanup-plan-*.json
+cleanup-log-*.json
+*.zip

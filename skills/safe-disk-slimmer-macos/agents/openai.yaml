@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS 安全磁盘瘦身"
+  short_description: "只读分析 macOS 磁盘占用并给出安全分级建议"
+  default_prompt: "只读分析我的 Mac 磁盘占用，先生成分级报告；不要删除任何文件。"

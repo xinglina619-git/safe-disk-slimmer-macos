@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "read_only_design",
+  "supports_deletion": false,
+  "forbidden_roots": [
+    "/System",
+    "/Library",
+    "/Applications",
+    "/Volumes",
+    "/private/var/db",
+    "/usr",
+    "/bin",
+    "/sbin"
+  ],
+  "report_only_segments": [
+    "Desktop",
+    "Documents",
+    "Downloads",
+    "Pictures",
+    "Movies",
+    "Music",
+    "Library/Messages",
+    "Photos Library.photoslibrary",
+    ".git",
+    "projects",
+    "workspace",
+    "课程",
+    "课件",
+    "聊天",
+    "备份",
+    "backup"
+  ],
+  "future_candidate_examples": [
+    "~/Library/Caches",
+    "~/Library/Logs",
+    "~/Library/Developer/Xcode/DerivedData",
+    "~/Library/Developer/CoreSimulator/Caches"
+  ],
+  "future_candidate_note": "这些只是未来人工确认和实机测试的候选示例，当前版本不得自动删除。"
+}

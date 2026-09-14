@@ -29,6 +29,10 @@ description: 只读分析 macOS 磁盘占用并生成安全分级建议；当前
 
 当前版本没有 macOS 扫描脚本，不适合承诺“自动扫描整机并清理”。如需提高效率，下一步应只新增只读扫描器，并先在 macOS 实机验证符号链接、挂载点和 APFS 特殊卷跳过逻辑；在这之前不得补删除器。
 
+## 实战场景补充
+
+遇到 Docker Desktop、Xcode、Homebrew、虚拟机镜像、APFS 快照、Time Machine、本地开发缓存或“先迁移备份再考虑删除”的请求时，先读取 [references/practical-cleanup-scenarios.md](references/practical-cleanup-scenarios.md)。当前 macOS 版仍只能给只读报告和人工建议，不得代删、代移动或代运行清理命令。
+
 ## 后续实现要求
 
 如果未来加入脚本，必须新增 macOS 实机测试、符号链接/挂载点跳过、不可变计划、`plan_id` 确认和执行器二次边界验证。

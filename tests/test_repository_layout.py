@@ -40,6 +40,15 @@ class MacOSRepositoryLayoutTests(unittest.TestCase):
         forbidden = [path for path in scripts if "execute" in path.name.lower() or "delete" in path.name.lower()]
         self.assertEqual([], forbidden)
 
+    def test_practical_cleanup_scenarios_reference_is_discoverable_and_read_only(self):
+        reference = ROOT / "skills/safe-disk-slimmer-macos/references/practical-cleanup-scenarios.md"
+        self.assertTrue(reference.is_file())
+        text = reference.read_text("utf-8")
+        for phrase in ["Docker", "Xcode", "Homebrew", "APFS", "hash", "read-only"]:
+            self.assertIn(phrase, text)
+        skill = (ROOT / "skills/safe-disk-slimmer-macos/SKILL.md").read_text("utf-8")
+        self.assertIn("practical-cleanup-scenarios.md", skill)
+
 
 if __name__ == "__main__":
     unittest.main()
